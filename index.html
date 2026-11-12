@@ -464,50 +464,46 @@
           </ul>
         </div>
 <div class="contact__form-wrap reveal" style="--d:.15s">
-      <form class="form" id="contact-form" name="contacto" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="event.stopPropagation(); return true;"></form>
-            <input type="hidden" name="form-name" value="contacto" />
-            <p class="hidden" style="display:none;">
-              <label>No rellenar si eres humano: <input name="bot-field" /></label>
-            </p>
-            <h3 class="form__title">Hazme tu consulta</h3>
+      <form class="form" id="contact-form-netlify" name="contacto" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contacto" />
+  <p class="hidden" style="display:none;">
+    <label>No rellenar si eres humano: <input name="bot-field" /></label>
+  </p>
+  <h3 class="form__title">Hazme tu consulta</h3>
 
-            <div class="form__row">
-              <div class="field">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required aria-describedby="err-nombre">
-                <p class="field__error" id="err-nombre" aria-live="polite"></p>
-              </div>
-              <div class="field">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required aria-describedby="err-email">
-                <p class="field__error" id="err-email" aria-live="polite"></p>
-              </div>
-            </div>
+  <div class="form__row">
+    <div class="field">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+    </div>
+  </div>
 
-            <div class="field">
-              <label for="nivel">Nivel de estudios</label>
-              <select id="nivel" name="nivel" required aria-describedby="err-nivel">
-                <option value="" selected disabled>Selecciona tu nivel</option>
-                <option value="bachillerato">Bachillerato</option>
-                <option value="grado">Grado</option>
-                <option value="fp">Formación Profesional</option>
-                <option value="otros">Otros</option>
-              </select>
-              <p class="field__error" id="err-nivel" aria-live="polite"></p>
-            </div>
+  <div class="field">
+    <label for="nivel">Nivel de estudios</label>
+    <select id="nivel" name="nivel" required>
+      <option value="" selected disabled>Selecciona tu nivel</option>
+      <option value="bachillerato">Bachillerato</option>
+      <option value="grado">Grado</option>
+      <option value="fp">Formación Profesional</option>
+      <option value="otros">Otros</option>
+    </select>
+  </div>
 
-            <div class="field">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame qué necesitas: temario, fecha del examen, objetivos…" required aria-describedby="err-mensaje"></textarea>
-              <p class="field__error" id="err-mensaje" aria-live="polite"></p>
-            </div>
+  <div class="field">
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame qué necesitas..." required></textarea>
+  </div>
 
-            <button type="submit" class="btn btn--primary btn--block" id="form-submit">
-              <span class="btn__label">Enviar consulta</span>
-              <span class="btn__spinner" aria-hidden="true"></span>
-            </button>
-            <p class="form__note">Sin compromiso. Tus datos solo se usan para responderte.</p>
-          </form>
+  <!-- Botón modificado para forzar el envío nativo sin bloqueo de la plantilla -->
+  <button type="button" class="btn btn--primary btn--block" id="form-submit" onclick="document.getElementById('contact-form-netlify').submit();">
+    <span class="btn__label">Enviar consulta</span>
+  </button>
+  <p class="form__note">Sin compromiso. Tus datos solo se usan para responderte.</p>
+</form>
 
           <div class="form-success" id="form-success" hidden>
             <div class="form-success__icon">
