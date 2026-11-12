@@ -470,12 +470,8 @@
 
         <p>Rellena el siguiente formulario.</p>
 
- <form
-            name="contacto"
-            method="POST"
-            data-netlify="true"
-        
-        >
+<div class="contact__form-wrap reveal" style="--d:.15s">
+          <form class="form" id="contact-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contacto" />
             <p class="hidden" style="display:none;">
               <label>No rellenar si eres humano: <input name="bot-field" /></label>
@@ -520,6 +516,18 @@
             <p class="form__note">Sin compromiso. Tus datos solo se usan para responderte.</p>
           </form>
 
+          <div class="form-success" id="form-success" hidden>
+            <div class="form-success__icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <h3 class="form-success__title">¡Consulta enviada!</h3>
+            <p class="form-success__text">
+              Gracias, <strong id="success-name">—</strong>. Te escribiré en menos de 24 horas a tu correo.
+              Mientras tanto, puedes repasar las <a href="#materias">materias</a> o probar el chat.
+            </p>
+            <button type="button" class="btn btn--ghost" id="form-again">Enviar otra consulta</button>
+          </div>
+        </div>
     </div>
 
 
