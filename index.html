@@ -464,7 +464,7 @@
           </ul>
         </div>
 <div class="contact__form-wrap reveal" style="--d:.15s">
-        <form class="form" id="contact-form" name="contacto" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field"></form>
+      <form class="form" id="contact-form" name="contacto" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="event.stopPropagation(); return true;"></form>
             <input type="hidden" name="form-name" value="contacto" />
             <p class="hidden" style="display:none;">
               <label>No rellenar si eres humano: <input name="bot-field" /></label>
