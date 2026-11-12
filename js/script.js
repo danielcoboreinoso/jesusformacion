@@ -108,62 +108,7 @@
   );
   $$('[data-counter]').forEach((el) => counterObserver.observe(el));
 
-  /* ============================================================
-     6. FORMULARIO DE CONSULTA (validación + envío simulado)
-     ============================================================ */
-  const form = $('#contact-form');
-  const formSuccess = $('#form-success');
-  const submitBtn = $('#form-submit');
-
-  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  const fields = {
-    nombre: {
-      el: $('#nombre'),
-      error: $('#err-nombre'),
-      validate: (v) =>
-        v.trim().length >= 2 || 'Escribe tu nombre (mínimo 2 caracteres).',
-    },
-    email: {
-      el: $('#email'),
-      error: $('#err-email'),
-      validate: (v) =>
-        EMAIL_RE.test(v.trim()) || 'Introduce un correo electrónico válido.',
-    },
-    nivel: {
-      el: $('#nivel'),
-      error: $('#err-nivel'),
-      validate: (v) => v !== '' || 'Selecciona tu nivel de estudios.',
-    },
-    mensaje: {
-      el: $('#mensaje'),
-      error: $('#err-mensaje'),
-      validate: (v) =>
-        v.trim().length >= 10 || 'Cuéntame un poco más (mínimo 10 caracteres).',
-    },
-  };
-
-  const setError = (field, message) => {
-    field.el.closest('.field').classList.add('has-error');
-    field.el.setAttribute('aria-invalid', 'true');
-    field.error.textContent = message;
-  };
-
-  const clearError = (field) => {
-    field.el.closest('.field').classList.remove('has-error');
-    field.el.removeAttribute('aria-invalid');
-    field.error.textContent = '';
-  };
-
-  // Limpiar errores mientras el usuario corrige
-  Object.values(fields).forEach((field) => {
-    const events = field.el.tagName === 'SELECT' ? ['change', 'input'] : ['input'];
-    events.forEach((evt) =>
-      field.el.addEventListener(evt, () => clearError(field))
-    );
-  });
-
-  form.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     let firstInvalid = null;
@@ -182,30 +127,33 @@
       return;
     }
 
-    // Envío simulado: estado de carga + panel de éxito
     submitBtn.classList.add('is-loading');
 
-    setTimeout(() => {
-      submitBtn.classList.remove('is-loading');
+    // Envío real a Netlify Forms mediante AJAX (fetch)
+    const formData = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error('Error en el envío');
+        submitBtn.classList.remove('is-loading');
 
-      const firstName = fields.nombre.el.value.trim().split(/\s+/)[0];
-      $('#success-name').textContent = firstName;
+        const firstName = fields.nombre.el.value.trim().split(/\s+/)[0];
+        $('#success-name').textContent = firstName;
 
-      form.hidden = true;
-      formSuccess.hidden = false;
-      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      $('.form-success__title', formSuccess).focus?.();
-    }, 1400);
+        form.hidden = true;
+        formSuccess.hidden = false;
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        $('.form-success__title', formSuccess).focus?.();
+      })
+      .catch(() => {
+        submitBtn.classList.remove('is-loading');
+        alert('Hubo un problema al enviar la consulta. Inténtalo de nuevo.');
+      });
   });
 
-  // Volver a mostrar el formulario para enviar otra consulta
-  $('#form-again').addEventListener('click', () => {
-    form.reset();
-    Object.values(fields).forEach(clearError);
-    formSuccess.hidden = true;
-    form.hidden = false;
-    fields.nombre.el.focus();
-  });
 
   /* ============================================================
      7. WIDGET DE CHAT FLOTANTE (interfaz simulada)
