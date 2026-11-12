@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesús · Profesor de Dibujo Técnico | Clases online</title>
+  <meta name="description" content="Clases particulares online de Dibujo Técnico: Geometría Descriptiva, Sistema Diédrico, Normalización y AutoCAD. Preparación de Selectividad/EBAU, Bachillerato y Universidad.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230E2A47'/%3E%3Cg fill='none' stroke='%23FFB03A' stroke-width='2'%3E%3Ccircle cx='20' cy='20' r='7.5'/%3E%3Cpath d='M20 9v5M20 26v5M9 20h5M26 20h5'/%3E%3C/g%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="header" id="site-header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="10" fill="#0E2A47"/>
+          <g fill="none" stroke="#FFB03A" stroke-width="2" stroke-linecap="round">
+            <circle cx="20" cy="20" r="7.5"/>
+            <path d="M20 9v5M20 26v5M9 20h5M26 20h5"/>
+          </g>
+        </svg>
+        <span class="brand__text"><strong>Jesús</strong><small>Dibujo Técnico</small></span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="#materias" class="nav__link">Materias</a></li>
+          <li><a href="#metodologia" class="nav__link">Metodología</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="btn btn--primary btn--sm nav__cta">Reservar clase</a>
+      </nav>
+
+      <a href="#contacto" class="btn btn--primary btn--sm header__cta">Reservar clase</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hero__circle"></span>
+        <span class="hero__circle hero__circle--2"></span>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow"><span class="pulse-dot" aria-hidden="true"></span>Clases online en directo · 1 a 1 y grupos reducidos</p>
+
+          <h1 class="hero__title">Domina el <span class="accent">Dibujo Técnico</span> a tu ritmo</h1>
+
+          <p class="hero__sub">
+            Clases particulares online de <strong>Geometría Descriptiva</strong>, <strong>Sistema Diédrico</strong>,
+            <strong>Normalización</strong> y <strong>AutoCAD</strong>. Preparación específica para la
+            <strong>Selectividad / EBAU</strong>, Bachillerato y primeros cursos universitarios.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#contacto" class="btn btn--primary">
+              Reserva tu primera clase
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#materias" class="btn btn--ghost">Ver materias</a>
+          </div>
+
+          <p class="hero__note">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            Primera clase de prueba gratuita, sin compromiso
+          </p>
+
+          <ul class="hero__stats">
+            <li>
+              <strong><span data-counter="12">12</span></strong>
+              <span>años de experiencia</span>
+            </li>
+            <li>
+              <strong><span data-counter="350">350</span>+</strong>
+              <span>alumnos preparados</span>
+            </li>
+            <li>
+              <strong><span data-counter="98">98</span>%</strong>
+              <span>de aprobados</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" style="--d:.2s">
+          <figure class="blueprint" role="img" aria-label="Croquis técnico animado: proyección diédrica de un punto, figuras geométricas y acotación">
+            <svg class="blueprint__svg" viewBox="0 0 560 420" aria-hidden="true">
+              <defs>
+                <pattern id="bp-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+                  <path d="M28 0H0v28" fill="none" stroke="#FFFFFF" stroke-opacity=".08"/>
+                </pattern>
+              </defs>
+
+              <!-- hoja de plano -->
+              <rect class="bp-sheet" x="16" y="16" width="528" height="388" rx="10" fill="url(#bp-grid)"/>
+
+              <!-- marcas de registro -->
+              <g class="bp-marks" fill="none" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="1.5">
+                <path d="M16 42V16H42"/>
+                <path d="M518 16H544V42"/>
+                <path d="M16 378V404H42"/>
+                <path d="M518 404H544V378"/>
+              </g>
+
+              <!-- etiquetas de planos -->
+              <text class="bp-label" x="472" y="58">P.V.</text>
+              <text class="bp-label" x="52" y="390">P.H.</text>
+
+              <!-- triángulo en plano vertical -->
+              <path class="bp-shape bp-anim" pathLength="1" d="M150 165 215 78 255 172Z"/>
+
+              <!-- punto A2 y su proyección -->
+              <circle class="bp-dot bp-dot--anim" cx="330" cy="120" r="5.5"/>
+              <text class="bp-label bp-label--strong" x="342" y="114">A₂</text>
+
+              <!-- línea de tierra -->
+              <line class="bp-ground bp-anim" pathLength="1" x1="70" y1="225" x2="490" y2="225"/>
+              <text class="bp-label bp-label--strong" x="498" y="230">L.T.</text>
+
+              <!-- línea de referencia vertical A2–A1 -->
+              <line class="bp-ref bp-anim" pathLength="1" x1="330" y1="126" x2="330" y2="334"/>
+
+              <!-- arco de abatimiento -->
+              <path class="bp-arc bp-anim" pathLength="1" d="M330 120A105 105 0 0 1 435 225"/>
+              <text class="bp-label" x="448" y="160">abat.</text>
+
+              <!-- punto A1 -->
+              <circle class="bp-dot bp-dot--anim bp-dot--delay" cx="330" cy="340" r="5.5"/>
+              <text class="bp-label bp-label--strong" x="342" y="352">A₁</text>
+
+              <!-- círculo en plano horizontal -->
+              <circle class="bp-shape bp-anim bp-anim--delay" pathLength="1" cx="390" cy="310" r="44"/>
+              <g class="bp-center" fill="none" stroke="#FFFFFF" stroke-opacity=".7" stroke-width="1.5">
+                <line x1="380" y1="310" x2="400" y2="310"/>
+                <line x1="390" y1="300" x2="390" y2="320"/>
+              </g>
+
+              <!-- cota del círculo -->
+              <g class="bp-dim">
+                <line x1="346" y1="354" x2="346" y2="380"/>
+                <line x1="434" y1="354" x2="434" y2="380"/>
+                <line x1="346" y1="372" x2="434" y2="372"/>
+                <path d="M346 372l8-3v6zM434 372l-8-3v6z" fill="#FFB03A"/>
+              </g>
+              <text class="bp-label bp-label--amber" x="373" y="366">Ø 88</text>
+            </svg>
+
+            <figcaption class="bp-chip bp-chip--1">
+              <svg viewBox="0 0 48 48" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+                <rect x="6" y="18" width="36" height="14" rx="2"/>
+                <path d="M14 18v7M22 18v10M30 18v7"/>
+              </svg>
+              Normalización UNE
+            </figcaption>
+
+            <figcaption class="bp-chip bp-chip--2">
+              <svg viewBox="0 0 48 48" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M24 6 40 15v18L24 42 8 33V15L24 6Z"/>
+                <path d="M8 15l16 9 16-9M24 24v18"/>
+              </svg>
+              Sistema Diédrico
+            </figcaption>
+
+            <figcaption class="blueprint__caption">CROQUIS N.º 07 · ESC. 1:1 · REV. A</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="section about" id="sobre-mi">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">01</span>Sobre mí</p>
+          <h2 class="section-title">Hola, soy Jesús</h2>
+          <p class="section-lead">Profesor de Dibujo Técnico e ingeniero. Más de una década convirtiendo el ejercicio «imposible» en un trazado limpio, paso a paso.</p>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__figure reveal">
+            <svg viewBox="0 0 260 300" role="img" aria-label="Retrato esquemático del profesor acotado como un plano técnico">
+              <rect x="10" y="10" width="240" height="280" rx="14" fill="#F4F7FA" stroke="#DDE4EC" stroke-width="1.5"/>
+              <g fill="none" stroke="#B9C6D6" stroke-width="1.5">
+                <path d="M10 36V10H36"/>
+                <path d="M224 10h26v26"/>
+                <path d="M10 264v26h26"/>
+                <path d="M224 290h26v-26"/>
+              </g>
+              <!-- persona -->
+              <circle cx="130" cy="120" r="44" fill="none" stroke="#0E2A47" stroke-width="2.5"/>
+              <path d="M60 252c0-42 31-72 70-72s70 30 70 72" fill="none" stroke="#0E2A47" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- marcas de centro -->
+              <g stroke="#F2680C" stroke-width="1.5" stroke-linecap="round">
+                <path d="M122 120h16M130 112v16"/>
+              </g>
+              <!-- cota vertical -->
+              <g stroke="#8A97A8" stroke-width="1.5">
+                <line x1="40" y1="76" x2="40" y2="164"/>
+                <path d="M36 76h8M36 164h8" fill="none"/>
+              </g>
+              <text x="34" y="124" transform="rotate(-90 34 124)" text-anchor="middle" class="bp-figure-label">Ø 88</text>
+              <!-- cota horizontal -->
+              <g stroke="#8A97A8" stroke-width="1.5">
+                <line x1="60" y1="272" x2="200" y2="272"/>
+                <path d="M60 268v8M200 268v8" fill="none"/>
+              </g>
+              <text x="130" y="266" text-anchor="middle" class="bp-figure-label">140</text>
+              <text x="130" y="288" text-anchor="middle" class="bp-figure-label bp-figure-label--strong">PROF. JESÚS · ESC. 1:1</text>
+            </svg>
+            <div class="about__badge">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              12+ años enseñando
+            </div>
+          </div>
+
+          <div class="about__text reveal" style="--d:.15s">
+            <p>
+              Soy <strong>Jesús</strong>, profesor de Dibujo Técnico desde hace más de 12 años. Ingeniero técnico de
+              formación, he compaginado el ejercicio de la profesión con la docencia: primero en academia y,
+              desde hace años, en online, con alumnos de toda España.
+            </p>
+            <p>
+              Mi metodología es <strong>práctica y directa</strong>: nada de teoría innecesaria. Trabajo con
+              pizarra digital compartida, de modo que ves cómo se construye cada figura en tiempo real y
+              corregimos tus trazados al instante, como si estuviéramos delante de la misma mesa de dibujo.
+            </p>
+
+            <ul class="about__points">
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Clases 1 a 1 o en grupos reducidos de máximo 3 alumnos
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Pizarra digital compartida y grabación de cada sesión
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Material propio: baterías de ejercicios por tema y nivel
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Horarios flexibles, también fines de semana
+              </li>
+            </ul>
+
+            <div class="about__badges" aria-label="Especialidades">
+              <span class="tag">Geometría</span>
+              <span class="tag">Diédrico</span>
+              <span class="tag">AutoCAD</span>
+              <span class="tag">EBAU</span>
+              <span class="tag">Normalización</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MATERIAS ============ -->
+    <section class="section section--paper subjects" id="materias">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">02</span>Materias</p>
+          <h2 class="section-title">Lo que puedo enseñarte</h2>
+          <p class="section-lead">Apoyo desde 1.º de Bachillerato hasta primeros cursos de Grado, pasando por software CAD y preparación intensiva de exámenes.</p>
+        </header>
+
+        <div class="subjects__grid">
+          <article class="card card--featured reveal">
+            <span class="card__flag">Más solicitada</span>
+            <span class="card__num" aria-hidden="true">01</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="7" y="7" width="34" height="34" rx="3"/>
+                <line x1="7" y1="24" x2="41" y2="24"/>
+                <circle cx="24" cy="15" r="2.6" fill="currentColor" stroke="none"/>
+                <circle cx="24" cy="33" r="2.6" fill="currentColor" stroke="none"/>
+                <line x1="24" y1="17.6" x2="24" y2="30.4" stroke-dasharray="2.5 3"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Sistema Diédrico</h3>
+            <p class="card__tag">Bachillerato · Universidad</p>
+            <p class="card__desc">Puntos, rectas y planos; abatimientos, cambios de plano, intersecciones, verdaderas magnitudes y distancias. De lo básico a los ejercicios de nota.</p>
+            <ul class="card__chips">
+              <li class="chip">Abatimientos</li>
+              <li class="chip">Verdaderas magnitudes</li>
+              <li class="chip">Cambios de plano</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" style="--d:.1s">
+            <span class="card__num" aria-hidden="true">02</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="24" cy="10" r="3"/>
+                <path d="M24 13 15 40"/>
+                <path d="M24 13 33 40"/>
+                <path d="M15 40a9 9 0 0 0 18 0" stroke-dasharray="3 3"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Geometría Descriptiva</h3>
+            <p class="card__tag">Universidad</p>
+            <p class="card__desc">Proyecciones cilíndrica y caballera, conos y cilindros, superficies, secciones planas y sombras. La asignatura filtro de tantos grados.</p>
+            <ul class="card__chips">
+              <li class="chip">Proyección caballera</li>
+              <li class="chip">Sombras</li>
+              <li class="chip">Secciones</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" style="--d:.2s">
+            <span class="card__num" aria-hidden="true">03</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="10" width="30" height="32" rx="3"/>
+                <rect x="18" y="5" width="12" height="8" rx="2"/>
+                <path d="m16 27 4 4 9-11"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Selectividad / EBAU</h3>
+            <p class="card__tag">Preparación intensiva</p>
+            <p class="card__desc">Repaso de todo el temario, resolución de exámenes de convocatorias anteriores y simulacros cronometrados para llegar al examen con soltura.</p>
+            <ul class="card__chips">
+              <li class="chip">Exámenes reales</li>
+              <li class="chip">Simulacros</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__num" aria-hidden="true">04</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="5" y="7" width="38" height="28" rx="3"/>
+                <path d="M24 13v9M19.5 17.5h9"/>
+                <path d="M17 41h14M24 35v6"/>
+              </svg>
+            </div>
+            <h3 class="card__title">AutoCAD y software CAD</h3>
+            <p class="card__tag">Bachillerato · Universidad · FP</p>
+            <p class="card__desc">Dibujo 2D, capas y bloques, acotación, layouts de impresión y modelado 3D básico. También FreeCAD y SketchUp para proyectos.</p>
+            <ul class="card__chips">
+              <li class="chip">2D</li>
+              <li class="chip">Bloques</li>
+              <li class="chip">Impresión</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" style="--d:.1s">
+            <span class="card__num" aria-hidden="true">05</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M24 6 40 15v18L24 42 8 33V15L24 6Z"/>
+                <path d="M8 15l16 9 16-9M24 24v18"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Bachillerato y FP</h3>
+            <p class="card__tag">Dibujo Técnico I y II</p>
+            <p class="card__desc">Apoyo continuo durante el curso: deberes, prácticas, proyectos y recuperación de pendientes, siguiendo el temario de tu centro.</p>
+            <ul class="card__chips">
+              <li class="chip">DT I</li>
+              <li class="chip">DT II</li>
+              <li class="chip">Prácticas</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" style="--d:.2s">
+            <span class="card__num" aria-hidden="true">06</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="6" y="18" width="36" height="14" rx="2"/>
+                <path d="M14 18v7M22 18v10M30 18v7M38 18v7"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Normalización y acotación</h3>
+            <p class="card__tag">Bachillerato · FP</p>
+            <p class="card__desc">Formatos y escalas, tipos de líneas, vistas, cortes y secciones, y acotación según normas UNE e ISO para planos impecables.</p>
+            <ul class="card__chips">
+              <li class="chip">Escalas</li>
+              <li class="chip">Cortes</li>
+              <li class="chip">Acotación UNE</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ============ METODOLOGÍA ============ -->
+    <section class="section method" id="metodologia">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">03</span>Metodología</p>
+          <h2 class="section-title">Cómo trabajamos</h2>
+          <p class="section-lead">Un proceso probado con cientos de alumnos: primero entender, después trazar, y por fin dominar.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title">Diagnóstico</h3>
+            <p class="step__text">Empezamos con una clase de prueba gratuita: vemos tu nivel, tus materiales y tus objetivos reales.</p>
+          </li>
+          <li class="step reveal" style="--d:.12s">
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title">Plan a medida</h3>
+            <p class="step__text">Diseño un temario personalizado según tu curso, tu centro y las fechas de tus exámenes.</p>
+          </li>
+          <li class="step reveal" style="--d:.24s">
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title">Práctica guiada</h3>
+            <p class="step__text">Ejercicios resueltos paso a paso en pizarra digital: tú dibujas, yo corrijo en directo.</p>
+          </li>
+          <li class="step reveal" style="--d:.36s">
+            <span class="step__num" aria-hidden="true">04</span>
+            <h3 class="step__title">Seguimiento</h3>
+            <p class="step__text">Deberes corregidos con feedback detallado, simulacros cronometrados y repaso de convocatorias.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <p class="eyebrow"><span class="eyebrow__num">04</span>Contacto</p>
+          <h2 class="section-title">¿Hablamos?</h2>
+          <p class="contact__lead">
+            Cuéntame qué necesitas y te responderé en menos de 24 horas. Sin compromiso:
+            la primera clase es de prueba y totalmente gratuita.
+          </p>
+
+          <ul class="contact__list">
+            <li>
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              </span>
+              <span><strong>Respuesta en menos de 24 h</strong><br>Laborables de 9:00 a 21:00</span>
+            </li>
+            <li>
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </span>
+              <span><strong>Videollamada + pizarra digital</strong><br>Tú dibujas, yo corrijo en directo</span>
+            </li>
+            <li>
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span><strong>Primera clase gratuita</strong><br>Sin compromiso ni permanencia</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__form-wrap reveal" style="--d:.15s">
+          <form class="form" id="contact-form-netlify" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+             <input type="hidden" name="form-name" value="contacto" />
+              <p class="hidden" style="display:none;">
+              <label>No rellenar si eres humano: <input name="bot-field" /></label>
+            </p>
+            <h3 class="form__title">Hazme tu consulta</h3>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required aria-describedby="err-nombre">
+                <p class="field__error" id="err-nombre" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required aria-describedby="err-email">
+                <p class="field__error" id="err-email" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="nivel">Nivel de estudios</label>
+              <select id="nivel" name="nivel" required aria-describedby="err-nivel">
+                <option value="" selected disabled>Selecciona tu nivel</option>
+                <option value="bachillerato">Bachillerato</option>
+                <option value="grado">Grado</option>
+                <option value="fp">Formación Profesional</option>
+                <option value="otros">Otros</option>
+              </select>
+              <p class="field__error" id="err-nivel" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame qué necesitas: temario, fecha del examen, objetivos…" required aria-describedby="err-mensaje"></textarea>
+              <p class="field__error" id="err-mensaje" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block" id="form-submit">
+              <span class="btn__label">Enviar consulta</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+            <p class="form__note">Sin compromiso. Tus datos solo se usan para responderte.</p>
+          </form>
+
+          <div class="form-success" id="form-success" hidden>
+            <div class="form-success__icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <h3 class="form-success__title">¡Consulta enviada!</h3>
+            <p class="form-success__text">
+              Gracias, <strong id="success-name">—</strong>. Te escribiré en menos de 24 horas a tu correo.
+              Mientras tanto, puedes repasar las <a href="#materias">materias</a> o probar el chat.
+            </p>
+            <button type="button" class="btn btn--ghost" id="form-again">Enviar otra consulta</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#inicio" class="brand brand--footer">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="10" fill="#12253C"/>
+            <g fill="none" stroke="#FFB03A" stroke-width="2" stroke-linecap="round">
+              <circle cx="20" cy="20" r="7.5"/>
+              <path d="M20 9v5M20 26v5M9 20h5M26 20h5"/>
+            </g>
+          </svg>
+          <span class="brand__text"><strong>Jesús</strong><small>Dibujo Técnico</small></span>
+        </a>
+        <p class="footer__tagline">Clases online de Dibujo Técnico · Toda España</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Enlaces del pie de página">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#materias">Materias</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <p class="footer__copy">© <span id="year">2026</span> Jesús · Profesor de Dibujo Técnico — Hecho con precisión milimétrica.</p>
+    </div>
+  </footer>
+
+  <!-- ============ CHAT FLOTANTE ============ -->
+  <div class="chat" id="chat">
+    <div class="chat__window" id="chat-window" role="dialog" aria-label="Chat con el profesor" hidden>
+      <header class="chat__header">
+        <span class="chat__avatar" aria-hidden="true">J</span>
+        <div class="chat__meta">
+          <strong>Jesús · Profesor</strong>
+          <span class="chat__status"><i aria-hidden="true"></i>En línea</span>
+        </div>
+        <button class="chat__close" id="chat-close" aria-label="Cerrar chat">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </header>
+
+      <div class="chat__messages" id="chat-messages" aria-live="polite">
+        <div class="msg msg--bot" id="chat-welcome">
+          <p>¡Hola! ¿Tienes dudas con algún ejercicio de Diédrico? Escríbeme aquí.</p>
+          <span class="msg__time" aria-hidden="true">ahora</span>
+        </div>
+      </div>
+
+      <div class="chat__chips" id="chat-chips">
+        <button type="button" class="chip-btn" data-msg="¿Cuál es el precio de las clases?">Precio</button>
+        <button type="button" class="chip-btn" data-msg="¿Qué horarios tienes disponibles?">Horarios</button>
+        <button type="button" class="chip-btn" data-msg="¿Cómo preparas la Selectividad / EBAU?">Preparación EBAU</button>
+      </div>
+
+      <form class="chat__form" id="chat-form">
+        <input type="text" id="chat-input" placeholder="Escribe tu mensaje…" autocomplete="off" aria-label="Tu mensaje">
+        <button type="submit" aria-label="Enviar mensaje">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="chat__launcher">
+      <span class="chat__unread" id="chat-unread" aria-hidden="true">1</span>
+      <button class="chat__toggle" id="chat-toggle" aria-expanded="false" aria-controls="chat-window" aria-label="Abrir chat">
+        <svg class="icon-chat" viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.6a8.4 8.4 0 0 1-.9-3.9 8.5 8.5 0 1 1 17 0Z"/>
+          <path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"/>
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+  </main>
+</body>
+</html>
